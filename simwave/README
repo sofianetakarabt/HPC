@@ -1,0 +1,30 @@
+In order to compile in DEBUG mode do the following:
+make DEBUG=1
+
+In order to compile without OpenMP do the following:
+make OPENMP=0
+
+NAME
+	simwave - a synthetic wave simulator
+SYNTAX
+	simwave [options]
+
+OPTIONS
+	-f, --file         VALUE       parse parameters from file.
+	-v, --verbose                  enable verbose mode.
+	-c, --cpu                      run serial code on the cpu.
+	-m, --ms                       use milliseconds for timing.
+	-u, --us                       use microseconds for timing.
+	-n, --ns                       use nanoseconds  for timing.
+	    --grid         V0,V1,...   domain x dimension.
+	    --dgrid        V0,V1,...   space delta step.
+	    --source_loc   V0,V1,...   source location in the grid.
+	-i, --iter         VALUE       simulation time step number.
+	    --cfl          VALUE       cfl pourcentage.
+	    --fmax         VALUE       source max frequency.
+	    --vmin         VALUE       min velocity.
+	    --vmax         VALUE       max velocity.
+	    --output       VALUE       snapshots file path.
+	    --nosnap                   do not save snapshots.
+	    --nbsnap       VALUE       snapshot frequency.
+	    --taper        V0,V1,...   pml tapers.
